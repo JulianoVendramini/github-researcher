@@ -23,6 +23,7 @@
 
 .navbar span{
     font-size: 25px;
+    color: #000;
 }
 
 .container{
@@ -91,4 +92,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.error-page{
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error-page h1{
+    text-align: center;
+    font-size: 70px;
 }
