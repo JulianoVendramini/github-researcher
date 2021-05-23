@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import { Form } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
+import CopyrightIcon from '@material-ui/icons/Copyright';
+
 
 function App() {
 
@@ -80,7 +82,7 @@ function App() {
               <p>{publicRepos}  repos</p>
             </div>
             <div className="container-card-infos-followers">
-              <p>{followers}  followers</p>
+            <p>{followers}  followers</p>
             </div>
             <div className="container-card-infos-following">
               <p>{following}   following</p>
@@ -92,7 +94,7 @@ function App() {
       )}
      
       <div className="footer">
-        <footer>Feito por Juliano Vendramini</footer>
+        <footer><CopyrightIcon />JulianoVendramini</footer>
       </div>
 
     </div>

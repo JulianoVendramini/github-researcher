@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
 
+
 * {
     padding: 0;
     margin: 0;
@@ -88,17 +89,32 @@
     padding: 8px 50px;
 }
 
+.container-card-infos img{
+    height: 20px;
+}
+
+.container-card-infos-followers{
+    display: flex;
+    text-align: center;
+}
+
 .container-card-infos-following{
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
 }
 
 .footer{
-    height: 8vh;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    color: #000;
+    
 }
 
 .footer footer{
     height: 100%;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
