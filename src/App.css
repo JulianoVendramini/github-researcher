@@ -89,10 +89,6 @@
     padding: 8px 50px;
 }
 
-.container-card-infos img{
-    height: 20px;
-}
-
 .container-card-infos-followers{
     display: flex;
     text-align: center;
@@ -129,4 +125,32 @@
 .error-page h1{
     text-align: center;
     font-size: 70px;
+}
+
+@media(max-width:520px) {
+    .container-card{
+        height: 500px;
+        width: 300px; 
+    }
+    .container-card-img img{
+        height: 210px;
+    }
+    .container-card-intro h2{
+        font-size: 20px;
+    }
+    .container-card-intro p{
+        font-size: 18px;
+    }
+    .container-card-infos p {
+        font-size: 12px;
+    }
+    .navbar{
+        padding: 0;
+    }
+    .navbar-search{
+        padding: 10px 0;
+    }
+    .navbar span{
+        font-size: 15px;
+    }
 }
