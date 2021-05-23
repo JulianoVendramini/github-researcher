@@ -77,13 +77,13 @@ function App() {
           </div>
           <div className="container-card-infos">
             <div className="container-card-infos-repos">
-              <p>{publicRepos} repositórios</p>
+              <p>{publicRepos}  repos</p>
             </div>
             <div className="container-card-infos-followers">
-              <span>{followers} followers</span>
+              <p>{followers}  followers</p>
             </div>
             <div className="container-card-infos-following">
-              <span>{following} following</span>
+              <p>{following}   following</p>
             </div>
           </div>
         </div>
