@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import { Form } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
+import Brightness4Icon from '@material-ui/icons/Brightness4';
 import CopyrightIcon from '@material-ui/icons/Copyright';
 
 
@@ -56,17 +57,22 @@ function App() {
 
       <nav className="navbar">
         <a href="/"><span>Dev Search</span></a>
-        <div className="navbar-search">
-          <Form onSubmit={handleSubmit}>
+        <div className="navbar-darktheme">
+          <Brightness4Icon style={{fontSize:35}}/>
+        </div>
+      </nav>
+
+
+      {error ? (<div className="error-page"><h1>{error}</h1></div>) : (
+        <div className="container">
+          <div className="navbar-search">
+          <Form onSubmit={handleSubmit} >
             <Form.Group>
               <Form.Input placeholder='GitHub User' name='git user' onChange={handleSearch}/>
               <Form.Button content='Search'/>
-            </Form.Group>
-          </Form>
-        </div>
-      </nav>
-      {error ? (<div className="error-page"><h1>{error}</h1></div>) : (
-        <div className="container">
+            </Form.Group>           
+          </Form>            
+        </div>   
         <div className="container-card">
           <div className="container-card-img">
             <img src={avatar} />
