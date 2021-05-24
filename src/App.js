@@ -4,6 +4,7 @@ import { Form } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import CopyrightIcon from '@material-ui/icons/Copyright';
+import {ThemeProvider} from 'styled-components';
 
 
 function App() {
@@ -16,6 +17,11 @@ function App() {
   const [publicRepos, setPublicRepos] = useState('');
   const [userInput, setUserInput] = useState('');
   const [error, setError] = useState(null);
+  const [theme, setTheme] = useState('light');
+
+  const settingTheme = () => {
+    theme === 'light' ? setTheme('dark') : setTheme('light');
+  }
 
   useEffect(() => {
     fetch('https://api.github.com/users/JulianoVendramini')
@@ -53,12 +59,16 @@ function App() {
 
 
   return (
+    <ThemeProvider>
     <div className="app">
 
       <nav className="navbar">
         <a href="/"><span>Dev Search</span></a>
         <div className="navbar-darktheme">
+          <a onClick={settingTheme}>
           <Brightness4Icon style={{fontSize:35}}/>
+          </a>
+          
         </div>
       </nav>
 
@@ -104,6 +114,7 @@ function App() {
       </div>
 
     </div>
+    </ThemeProvider>
   );
 }
 
