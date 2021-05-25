@@ -11,25 +11,23 @@
 
 .navbar{
     height: 7vh;
-    background-color: #f1f1f1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    background-color: #161b22;
 }
 
-.navbar-darktheme{
+.navbar-darktheme button{
     cursor: pointer;
 }
 
 .navbar span{
     font-size: 25px;
-    color: #000;
+    color: #fff;
 }
 
 .container{
-    background-color: #ffffff;
     height: 85vh;
     display: flex;
     flex-direction: column;
@@ -40,9 +38,7 @@
 .container-card{
     height: 600px;
     width: 400px;
-    background-color: #f1f1f1;
     border-radius: 1.5rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .container-card-img{
@@ -64,29 +60,27 @@
 .container-card-intro{
     padding: 20px;
     text-align: center;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     height: 50%;
-    background-color: #fff;
 }
 
 .container-card-intro h2{
     font-size: 25px;
     font-weight: lighter;
-    color: #1f1f1f;
 }
 .container-card-intro p{
     font-size: 22px;
-    color: #1f1f1f;
 }
 
 .container-card-infos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 60%;
-    color: #1f1f1f;
 }
 
 .container-card-infos p {
-    font-size: 17px;
-    padding: 8px 50px;
+    font-size: 20px;
+    padding: 0 20px;
 }
 
 .container-card-infos-followers{
@@ -103,9 +97,7 @@
     position: fixed;
     left: 0;
     bottom: 0;
-    padding: 10px;
-    color: #000;
-    
+    padding: 10px;   
 }
 
 .footer footer{
@@ -136,13 +128,13 @@
         height: 210px;
     }
     .container-card-intro h2{
-        font-size: 20px;
-    }
-    .container-card-intro p{
         font-size: 18px;
     }
+    .container-card-intro p{
+        font-size: 16px;
+    }
     .container-card-infos p {
-        font-size: 12px;
+        font-size: 14px;
     }
     .navbar{
         padding: 0;
