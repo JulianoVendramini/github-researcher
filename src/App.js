@@ -4,7 +4,8 @@ import { Form } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import CopyrightIcon from '@material-ui/icons/Copyright';
-import {ThemeProvider} from 'styled-components';
+import { ThemeProvider } from "styled-components";
+import {lightTheme, darkTheme, GlobalStyles} from './styles/theme.js';
 
 
 function App() {
@@ -19,9 +20,10 @@ function App() {
   const [error, setError] = useState(null);
   const [theme, setTheme] = useState('light');
 
-  const settingTheme = () => {
+  const themeToggler = () => {
     theme === 'light' ? setTheme('dark') : setTheme('light');
   }
+
 
   useEffect(() => {
     fetch('https://api.github.com/users/JulianoVendramini')
@@ -59,15 +61,16 @@ function App() {
 
 
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+      <GlobalStyles />
     <div className="app">
 
       <nav className="navbar">
         <a href="/"><span>Dev Search</span></a>
         <div className="navbar-darktheme">
-          <a onClick={settingTheme}>
+          <button onClick={themeToggler}>
           <Brightness4Icon style={{fontSize:35}}/>
-          </a>
+          </button>
           
         </div>
       </nav>
@@ -85,7 +88,7 @@ function App() {
         </div>   
         <div className="container-card">
           <div className="container-card-img">
-            <img src={avatar} />
+            <img src={avatar} alt='user avatar'/>
           </div>
 
           <div className="container-card-all">
@@ -112,7 +115,6 @@ function App() {
       <div className="footer">
         <footer><CopyrightIcon />JulianoVendramini</footer>
       </div>
-
     </div>
     </ThemeProvider>
   );
